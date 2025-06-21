@@ -4,6 +4,7 @@
 // @version      1.0
 // @description  Track cumulative time spent on ChessTV and store it in localStorage.
 // @author       Aditya
+// @match        https://www.chess.com/*/tv
 // @match        https://www.chess.com/tv
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/main/scripts/chesstv-tracker.user.js
