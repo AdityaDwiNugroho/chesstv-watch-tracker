@@ -1,47 +1,70 @@
-# ChessTV Watch Tracker
+# ChessTV Watch Time Tracker
 
-A userscript or bookmarklet tool that helps track what you've watched on [Chess.com TV](https://www.chess.com/tv). It highlights watched videos and provides a minimal UI overlay.
+Ever wondered how much time you've actually spent watching [Chess.com TV](https://www.chess.com/tv)? This lightweight tracker gives you the answer Chess.com doesn't provide - your total ChessTV watch time, displayed right on the page.
 
-## Features
+**Important:** This tracker only counts watch time from the moment you install it forward. It can't track your previous ChessTV sessions (that would require access to data we don't have).
 
-- Automatically detects and highlights videos you've already watched.
-- Simple, unobtrusive UI overlay.
-- Lightweight, obfuscated bundle for performance and security.
-- Easy to install via console, bookmarklet, or Tampermonkey.
+## What It Does
 
-## Usage
+- **Tracks your watch time** - Shows exactly how long you've been watching ChessTV since installation
+- **Clean, minimal display** - Simple time counter that doesn't interfere with your viewing experience  
+- **Privacy-focused** - All data stays in your browser, nothing is sent anywhere
+- **Lightweight** - Won't slow down your ChessTV experience
 
-### Option 1: Paste in Console (Temporary Use)
+## Why Use This?
 
-1. Go to [https://www.chess.com/tv](https://www.chess.com/tv).
-2. Open your browser’s Developer Console (press `F12` or `Ctrl + Shift + I`, then go to the **Console** tab).
-3. Paste the following code and press Enter:
+Chess.com has achievements for watching ChessTV but won't tell you your actual watch time. This tracker fills that gap, giving you awareness of your viewing habits going forward. Perfect for:
 
+- Balancing watching vs. playing time
+- Satisfying your curiosity about your chess consumption  
+- Having data that even Chess.com doesn't provide
+
+## Installation Options
+
+### Option 1: Console (Quick Test)
+1. Go to [https://www.chess.com/tv](https://www.chess.com/tv)
+2. Open Developer Console (`F12` → Console tab)
+3. Paste this code and press Enter:
 ```js
 fetch("https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/main/dist/bundle.js")
   .then((res) => res.text())
   .then((code) => eval(code));
 ```
 
-### Option 2: Bookmarklet (Quick Reuse)
-
-1. Create a new browser bookmark.
-2. Use this code as the bookmark URL:
+### Option 2: Bookmarklet (Easy Reuse)
+1. Create a new bookmark with this as the URL:
 ```
 javascript:(function(){fetch("https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/main/dist/bundle.js").then(r=>r.text()).then(c=>eval(c));})();
 ```
-3. Visit [ChessTV](https://www.chess.com/tv) and click the bookmark whenever you want to activate the tracker
+2. Click the bookmark whenever you visit ChessTV to activate tracking
 
-### Option 3: Tampermonkey (Auto-Inject)
+### Option 3: Tampermonkey (Automatic)
+1. Install [Tampermonkey](https://www.tampermonkey.net/) browser extension
+2. Create a new userscript using [scripts/chesstv-tracker.user.js](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/scripts/chesstv-tracker.user.js)
+3. The tracker will automatically run every time you visit chess.com/tv
 
-1. Install [https://www.tampermonkey.net/](https://www.tampermonkey.net/) browser extension
-2. Create a new userscript and paste the contents of [scripts/chesstv-tracker.user.js](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/scripts/chesstv-tracker.user.js)
-3. The tracker will now run automatically every time you open [chess.com/tv](https://www.chess.com/tv)
+## Screenshot
 
-# Screenshot
+![ChessTV Watch Time Tracker Screenshot](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/screenshot_image.png?raw=true)
 
-![screenshot](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/screenshot_image.png?raw=true)
+*The tracker shows your accumulated watch time in a clean, unobtrusive overlay*
 
-# Support
-If you find this project useful, feel free to support me on Trakteer.id
+## FAQ
+
+**Q: Can this track my past ChessTV viewing history?**  
+A: No, the tracker only counts time from when you first install it. It can't access your previous viewing data.
+
+**Q: Is this against Chess.com's terms of service?**  
+A: This tracker doesn't modify gameplay, provide advantages, or interfere with Chess.com's functionality. It simply tracks publicly available viewing time, similar to manually timing yourself with a stopwatch.
+
+**Q: Where is my data stored?**  
+A: All tracking data is stored locally in your browser. Nothing is sent to external servers.
+
+## Support
+
+If you find this project useful, feel free to support development:  
 [https://teer.id/adityadwinugroho](https://teer.id/adityadwinugroho)
+
+---
+
+*Built because Chess.com won't tell you how much time you've actually spent watching ChessTV. Now you can know!*
