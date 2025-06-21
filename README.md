@@ -43,8 +43,14 @@ javascript:(function(){fetch("https://raw.githubusercontent.com/AdityaDwiNugroho
 2. Create a new userscript using [scripts/chesstv-tracker.user.js](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/scripts/chesstv-tracker.user.js)
 3. The tracker will automatically run every time you visit chess.com/tv
 
-## Screenshot
+## Demo
 
+### Video Demo
+https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/video_demo.mkv
+
+*See the tracker in action - watch time counting in real-time*
+
+### Screenshot
 ![ChessTV Watch Time Tracker Screenshot](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/screenshot_image.png?raw=true)
 
 *The tracker shows your accumulated watch time in a clean, unobtrusive overlay*
