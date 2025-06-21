@@ -45,15 +45,15 @@ javascript:(function(){fetch("https://raw.githubusercontent.com/AdityaDwiNugroho
 
 ## Demo
 
-### Video Demo
-https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/video_demo.mkv
+### Live Demo
+![ChessTV Watch Time Tracker Demo](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/video_demo.gif?raw=true)
 
-*See the tracker in action - watch time counting in real-time*
+*Watch the tracker count your ChessTV time in real-time*
 
 ### Screenshot
 ![ChessTV Watch Time Tracker Screenshot](https://github.com/AdityaDwiNugroho/chesstv-watch-tracker/blob/main/docs/screenshot_image.png?raw=true)
 
-*The tracker shows your accumulated watch time in a clean, unobtrusive overlay*
+*Clean, unobtrusive time display that doesn't interfere with your viewing*
 
 ## FAQ
 
