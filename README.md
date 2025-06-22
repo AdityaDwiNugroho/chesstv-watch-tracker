@@ -33,6 +33,7 @@ fetch("https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/
 
 ### Option 2: Bookmarklet (Easy Reuse)
 1. Create a new bookmark with this as the URL:
+   Here's how: [https://www.freecodecamp.org/news/what-are-bookmarklets/](https://www.freecodecamp.org/news/what-are-bookmarklets/)
 ```
 javascript:(function(){fetch("https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/main/dist/bundle.js").then(r=>r.text()).then(c=>eval(c));})();
 ```
