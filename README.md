@@ -19,7 +19,7 @@ Chess.com has achievements for watching ChessTV but won't tell you your actual w
 - Satisfying your curiosity about your chess consumption  
 - Having data that even Chess.com doesn't provide
 
-## Installation Options
+## Methods
 
 ### Option 1: Console (Quick Test)
 1. Go to [https://www.chess.com/tv](https://www.chess.com/tv)
