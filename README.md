@@ -32,12 +32,26 @@ fetch("https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/
 ```
 
 ### Option 2: Bookmarklet (Easy Reuse)
-1. Create a new bookmark with this as the URL:
-   Here's how: [https://www.freecodecamp.org/news/what-are-bookmarklets/](https://www.freecodecamp.org/news/what-are-bookmarklets/)
+
+**Step 1: Create the Bookmarklet**
+1. **Right-click** your browser's bookmarks bar (if hidden, press `Ctrl+Shift+B` to show it)
+2. Select **"Add page"** or **"New bookmark"**
+3. **Name it**: `ChessTV Tracker` (or any name you prefer)
+4. **Copy and paste this entire code** as the URL/Location:
 ```
 javascript:(function(){fetch("https://raw.githubusercontent.com/AdityaDwiNugroho/chesstv-watch-tracker/main/dist/bundle.js").then(r=>r.text()).then(c=>eval(c));})();
 ```
-2. Click the bookmark whenever you visit ChessTV to activate tracking
+5. **Save the bookmark**
+
+**Step 2: Use It**
+1. Go to [https://www.chess.com/tv](https://www.chess.com/tv)
+2. **Click your new bookmark** to activate the tracker
+3. The time counter will appear and start tracking your watch time
+
+**Need Help Creating Bookmarks?**  
+Different browsers have slightly different steps. Here's a helpful guide: [How to Create Bookmarklets](https://www.freecodecamp.org/news/what-are-bookmarklets/)
+
+**Pro Tip:** You only need to create the bookmarklet once, then just click it whenever you want to start tracking on ChessTV!
 
 ### Option 3: Tampermonkey (Automatic)
 1. Install [Tampermonkey](https://www.tampermonkey.net/) browser extension
