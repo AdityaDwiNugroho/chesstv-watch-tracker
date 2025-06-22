@@ -22,6 +22,30 @@ Email: adityadn.work@proton.me
 
 import { WatchTimeData } from './types';
 
+(function () {
+  const url = new URL(window.location.href);
+  const pathParts = url.pathname.split('/').filter(Boolean);
+
+  // Match /tv or /en/tv, /zh/tv, etc.  where last segment is 'tv'
+  const isOnChessTV =
+    (pathParts.length === 1 && pathParts[0] === 'tv') ||
+    (pathParts.length === 2 && pathParts[1] === 'tv');
+
+  const fromTracker = url.searchParams.has('fromTracker');
+
+  if (!isOnChessTV && !fromTracker) {
+    console.warn('[ChessTV Tracker] Not on a valid ChessTV page. Redirecting...');
+    window.location.href = 'https://www.chess.com/tv?fromTracker=1';
+    return;
+  }
+
+  // Optional: Clean up ?fromTracker param for a clean URL
+  if (fromTracker) {
+    url.searchParams.delete('fromTracker');
+    window.history.replaceState({}, '', url.pathname);
+  }
+})();
+
 const STORAGE_KEY = 'chessTV_watch_data';
 const CHECK_INTERVAL = 1000;
 
